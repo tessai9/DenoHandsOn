@@ -9,6 +9,7 @@
   - Hello Worldの表示
   - index.htmlの表示
   - (おまけ)Reactコンポーネントを返してみる
+- (おまけ)トップレベルawaitを使ってみる
 
 ## Denoの紹介
 
@@ -19,6 +20,7 @@
     - `modules.exports = ...`や`require()`のようなCommonJS形式はエラーになる
   - 指定パスは元ファイルからの相対パス or 絶対パス
   - 拡張子は省略不可
+- トップレベルawaitが使える
 
 ## Denoをインストール
 
@@ -114,3 +116,17 @@ $ deno run FizzBuzz.ts
 ### React Componentを返してみる
 
 [servestのexample](https://deno.land/x/servest@v1.1.6)を参照
+
+
+## トップレベルawaitを使ってみる 
+
+1. `sample_http_req.js`をnodeで実行する（エラー）
+
+    ```bash
+    $ node sample_http_req.js
+    ```
+1. denoで実行する
+
+    ```bash
+    $ deno run --allow-net sample_http_req.js
+    ```
